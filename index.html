@@ -1,0 +1,48 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="indexScript.js"></script>
+    <style>
+        .achiv-table{
+            margin: 10px;
+        }
+        tr{
+            margin: 2px;
+        }
+        td{
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <form id="nick-form">
+        <label> Enter nick-name: </label>
+        <input type="text" id="nick" required>
+        <input type="submit" value="GET">
+    </form>
+
+    <table class="achiv-table">
+        <tbody id="achiv-table-body"></tbody>
+    </table>
+
+    <table class="achiv-table">
+        <tbody id="seria-table-body"></tbody>
+    </table>
+    
+    <table class="achiv-table">
+        <tbody id="frags-table-body"></tbody>
+    </table>
+
+    <script>
+        document.getElementById("nick-form").onsubmit = function (e){
+            e.preventDefault();
+            getIdRequest();
+        }
+    </script>
+</body>
+
+</html>
